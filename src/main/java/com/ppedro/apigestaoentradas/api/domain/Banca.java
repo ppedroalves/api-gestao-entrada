@@ -22,4 +22,6 @@ public class Banca {
     @OneToMany
     private List<Entrada> entradas;
 
+
+
 }
