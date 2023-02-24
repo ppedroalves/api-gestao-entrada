@@ -17,11 +17,13 @@ public class Entrada {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
+    @JoinColumn(name = "banca_id", nullable = false)
     private Banca banca;
     private LocalDate dataEntrada;
     private String campeonato;
     private String timeCasa;
     private String timeFora;
+    private String mercado;
     private Double valor;
     private Double odd;
     private Resultado resultado;

@@ -20,8 +20,7 @@ public class Banca {
     private Double valorInicial;
     private Double valorAtual;
     @OneToMany
+    @JoinColumn(name = "banca_id")
     private List<Entrada> entradas;
-
-
 
 }
