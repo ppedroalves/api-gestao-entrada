@@ -7,7 +7,6 @@ import com.ppedro.apigestaoentradas.api.repository.PessoaRepository;
 import lombok.AllArgsConstructor;
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
 @AllArgsConstructor
@@ -26,4 +25,5 @@ public class PessoaService {
         return pessoaRepository.findById(id)
                 .orElseThrow(()-> new ObjectNotFoundException("Pessoa nao encontrada", id));
     }
+
 }

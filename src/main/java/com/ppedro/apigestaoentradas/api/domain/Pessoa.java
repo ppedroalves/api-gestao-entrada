@@ -25,7 +25,8 @@ public class Pessoa{
     private String email;
     @JsonFormat(pattern = "dd/MM/yyyy", shape = JsonFormat.Shape.STRING)
     private LocalDate dataNascimento;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "banca_id")
     private Banca banca;
 
 
